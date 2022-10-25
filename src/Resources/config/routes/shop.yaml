@@ -1,1 +1,3 @@
-# TODO Add your shop routes here
+setono_sylius_coupon_url_application_shop_apply_coupon:
+    path: /coupon
+    controller: setono_sylius_coupon_url_application.controller.action.apply_coupon 

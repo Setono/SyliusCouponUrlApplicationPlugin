@@ -1,0 +1,2 @@
+setono_sylius_coupon_url_application:
+    resource: "@SetonoSyliusCouponUrlApplicationPlugin/Resources/config/routes.yaml"

@@ -1,6 +1,6 @@
 {
-    "name": "setono/sylius-plugin-skeleton",
-    "description": "Acme example plugin for Sylius.",
+    "name": "setono/sylius-coupon-url-application-plugin",
+    "description": "Setono example plugin for Sylius.",
     "license": "MIT",
     "type": "sylius-plugin",
     "keywords": [
@@ -9,6 +9,7 @@
     ],
     "require": {
         "php": ">=7.4",
+        "setono/doctrine-object-manager-trait": "^1.1",
         "symfony/config": "^4.4 || ^5.4 || ^6.0",
         "symfony/dependency-injection": "^4.4 || ^5.4 || ^6.0",
         "symfony/http-kernel": "^4.4 || ^5.4 || ^6.0"
@@ -38,12 +39,12 @@
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
-            "Acme\\SyliusExamplePlugin\\": "src/"
+            "Setono\\SyliusCouponUrlApplicationPlugin\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\Acme\\SyliusExamplePlugin\\": "tests/"
+            "Tests\\Setono\\SyliusCouponUrlApplicationPlugin\\": "tests/"
         },
         "classmap": [
             "tests/Application/Kernel.php"
@@ -68,7 +69,7 @@
             "psalm"
         ],
         "check-style": "ecs check",
-        "ensure-test-container-exists": "[[ -f tests/Application/var/cache/test/Tests_Acme_SyliusExamplePlugin_Application_KernelTestDebugContainer.xml ]] || tests/Application/bin/console cache:warmup --env=test",
+        "ensure-test-container-exists": "[[ -f tests/Application/var/cache/test/Tests_Setono_SyliusCouponUrlApplicationPlugin_Application_KernelTestDebugContainer.xml ]] || tests/Application/bin/console cache:warmup --env=test",
         "fix-style": "ecs check --fix",
         "phpunit": "phpunit"
     }

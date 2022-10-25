@@ -1,0 +1,6 @@
+setono_sylius_coupon_url_application:
+    form:
+        apply_coupon:
+            code: Coupon code
+    ui:
+        apply_coupon: Apply coupon code to your order

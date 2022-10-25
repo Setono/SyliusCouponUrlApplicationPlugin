@@ -2,6 +2,23 @@
 <container xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://symfony.com/schema/dic/services"
            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
     <services>
-        <!-- Put your services here -->
+        <service id="setono_sylius_coupon_url_application.controller.action.apply_coupon"
+                 class="Setono\SyliusCouponUrlApplicationPlugin\Controller\Action\ApplyCouponAction" public="true">
+            <argument type="service" id="form.factory"/>
+            <argument type="service" id="twig"/>
+            <argument type="service" id="sylius.context.cart"/>
+            <argument type="service" id="sylius.order_processing.order_processor"/>
+            <argument type="service" id="doctrine"/>
+            <argument type="service" id="router"/>
+
+            <tag name="controller.service_arguments"/>
+        </service>
+
+        <service id="setono_sylius_coupon_url_application.form.type.apply_coupon"
+                 class="Setono\SyliusCouponUrlApplicationPlugin\Form\Type\ApplyCouponType">
+            <argument type="service" id="sylius.repository.promotion_coupon"/>
+
+            <tag name="form.type"/>
+        </service>
     </services>
 </container>
