@@ -1,0 +1,2 @@
+imports:
+    - { resource: "@SetonoSyliusCouponUrlApplicationPlugin/Resources/config/app/config.yaml" }

@@ -1,0 +1,6 @@
+sylius_ui:
+    events:
+        sylius.admin.promotion_coupon.index.content:
+            blocks:
+                javascripts:
+                    template: '@SetonoSyliusCouponUrlApplicationPlugin/admin/promotion_coupon/_javascripts.html.twig'
