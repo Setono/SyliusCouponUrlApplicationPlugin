@@ -15,6 +15,10 @@
         "string",
         "true",
         "void",
-        "Sylius\\Bundle\\CoreBundle\\Application\\SyliusPluginTrait"
+        "Sylius\\Bundle\\CoreBundle\\Application\\SyliusPluginTrait",
+        "Sylius\\Component\\Core\\Model\\OrderInterface",
+        "Sylius\\Component\\Order\\Context\\CartContextInterface",
+        "Sylius\\Component\\Order\\Processor\\OrderProcessorInterface",
+        "Sylius\\Component\\Promotion\\Repository\\PromotionCouponRepositoryInterface"
     ]
 }
