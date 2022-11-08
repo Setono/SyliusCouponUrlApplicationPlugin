@@ -14,3 +14,11 @@ sylius_shop:
 
 sylius_api:
     enabled: true
+
+sylius_ui:
+    events:
+        sylius.shop.homepage:
+            blocks:
+                coupon_url_application_message:
+                    template: "shop/homepage/_coupon_url_application_message.html.twig"
+                    priority: 100
