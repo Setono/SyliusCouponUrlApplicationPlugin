@@ -1,0 +1,5 @@
+{# @var data \Sylius\Component\Core\Model\PromotionCouponInterface #}
+
+{% set url = url('setono_sylius_coupon_url_application_shop_apply_coupon', {'coupon': data.code}) %}
+
+<span class="coupon-url" data-url="{{ url }}">{{ url }}</span>

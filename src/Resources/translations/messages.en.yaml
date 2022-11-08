@@ -4,3 +4,4 @@ setono_sylius_coupon_url_application:
             code: Coupon code
     ui:
         apply_coupon: Apply coupon code to your order
+        url: URL
