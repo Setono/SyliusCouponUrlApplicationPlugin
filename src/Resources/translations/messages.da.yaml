@@ -1,0 +1,7 @@
+setono_sylius_coupon_url_application:
+    form:
+        apply_coupon:
+            code: Rabatkode
+    ui:
+        apply_coupon: Anvend rabatkode på din ordre
+        url: URL
