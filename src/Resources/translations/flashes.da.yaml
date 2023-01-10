@@ -1,2 +1,5 @@
 setono_sylius_coupon_url_application:
-    coupon_applied: Rabatkoden er nu tilføjet din ordre
+    coupon_applied: Rabatkoden er nu aktiveret i din indkøbskurv
+    coupon_applied_not_fulfilled: Din indkøbskurv indeholder ikke de varer, beløb eller møder øvrige kriterier, som er nødvendig for at benytte din rabatkode. Læs om kriterierne for rabatkoden, der hvor du modtog denne (e-mail, nyhedsbrev eller andet)
+    coupon_not_eligible: Rabatkoden er ikke længere gyldig. Det kan skyldes den er udløbet, har opbrugt sin brugsgrænse eller andet
+    coupon_already_applied: BEMÆRK at du allerede har tilføjet en rabatkode (%code%) til din ordre, og at du overskriver den, hvis du tilføjer en ny
