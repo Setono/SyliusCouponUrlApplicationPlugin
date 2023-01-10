@@ -10,6 +10,7 @@
             <argument type="service" id="sylius.order_processing.order_processor"/>
             <argument type="service" id="doctrine"/>
             <argument type="service" id="router"/>
+            <argument type="service" id="sylius.promotion_coupon_eligibility_checker"/>
 
             <tag name="controller.service_arguments"/>
         </service>

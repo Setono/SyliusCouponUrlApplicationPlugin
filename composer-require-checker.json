@@ -19,6 +19,7 @@
         "Sylius\\Component\\Core\\Model\\OrderInterface",
         "Sylius\\Component\\Order\\Context\\CartContextInterface",
         "Sylius\\Component\\Order\\Processor\\OrderProcessorInterface",
-        "Sylius\\Component\\Promotion\\Repository\\PromotionCouponRepositoryInterface"
+        "Sylius\\Component\\Promotion\\Repository\\PromotionCouponRepositoryInterface",
+        "Sylius\\Component\\Promotion\\Checker\\Eligibility\\PromotionCouponEligibilityCheckerInterface"
     ]
 }
