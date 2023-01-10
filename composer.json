@@ -8,10 +8,10 @@
         "sylius-plugin"
     ],
     "require": {
-        "php": ">=7.4",
+        "php": ">=8.0",
         "doctrine/persistence": "^2.5",
         "setono/doctrine-object-manager-trait": "^1.1",
-        "sylius/grid-bundle": "^1.10",
+        "sylius/grid-bundle": "^1.11",
         "sylius/resource-bundle": "^1.8",
         "symfony/config": "^5.4 || ^6.0",
         "symfony/dependency-injection": "^5.4 || ^6.0",

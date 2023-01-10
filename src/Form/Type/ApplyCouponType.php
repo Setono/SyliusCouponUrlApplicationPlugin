@@ -18,11 +18,8 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
  */
 final class ApplyCouponType extends AbstractType
 {
-    private PromotionCouponRepositoryInterface $promotionCouponRepository;
-
-    public function __construct(PromotionCouponRepositoryInterface $promotionCouponRepository)
+    public function __construct(private PromotionCouponRepositoryInterface $promotionCouponRepository)
     {
-        $this->promotionCouponRepository = $promotionCouponRepository;
     }
 
     public function buildForm(FormBuilderInterface $builder, array $options): void
