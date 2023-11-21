@@ -32,6 +32,7 @@ final class ApplyCouponAction
         ManagerRegistry $managerRegistry,
         private UrlGeneratorInterface $urlGenerator,
         private ?PromotionCouponEligibilityCheckerInterface $promotionCouponEligibilityChecker = null,
+        private string $defaultRedirectRoute = 'sylius_shop_cart_summary',
     ) {
         $this->managerRegistry = $managerRegistry;
 
@@ -74,7 +75,7 @@ final class ApplyCouponAction
                 if (null !== $this->promotionCouponEligibilityChecker && !$this->promotionCouponEligibilityChecker->isEligible($cart, $command->coupon)) {
                     $this->addFlash($request, 'error', 'setono_sylius_coupon_url_application.coupon_not_eligible');
 
-                    return $this->redirect($command);
+                    return new RedirectResponse($this->urlGenerator->generate('setono_sylius_coupon_url_application_shop_apply_coupon'));
                 }
 
                 $cart->setPromotionCoupon($command->coupon);
@@ -121,7 +122,7 @@ final class ApplyCouponAction
 
     private function redirect(ApplyCouponCommand $command): RedirectResponse
     {
-        return new RedirectResponse($command->redirect ?? $this->urlGenerator->generate('setono_sylius_coupon_url_application_shop_apply_coupon'));
+        return new RedirectResponse($command->redirect ?? $this->urlGenerator->generate($this->defaultRedirectRoute));
     }
 
     /**
