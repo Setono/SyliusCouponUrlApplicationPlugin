@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Setono\SyliusCouponUrlApplicationPlugin\DependencyInjection;
+namespace Setono\SyliusCouponUrlApplicationPlugin\Tests\DependencyInjection;
 
 use Matthias\SymfonyDependencyInjectionTest\PhpUnit\AbstractExtensionTestCase;
 use Setono\SyliusCouponUrlApplicationPlugin\DependencyInjection\SetonoSyliusCouponUrlApplicationExtension;
