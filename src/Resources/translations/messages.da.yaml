@@ -5,3 +5,4 @@ setono_sylius_coupon_url_application:
     ui:
         apply_coupon: Anvend rabatkode på din ordre
         url: URL
+        use_other_base_url: Brug anden basis-URL...

@@ -1,3 +1,10 @@
 setono_sylius_coupon_url_application_shop_apply_coupon:
     path: /coupon
-    controller: setono_sylius_coupon_url_application.controller.action.apply_coupon 
+    defaults:
+        _controller: setono_sylius_coupon_url_application.controller.action.apply_coupon
+    
+setono_sylius_coupon_url_application_shop_partial_apply_coupon:
+    path: /_partial/coupon
+    controller: 
+    defaults:
+        _controller: setono_sylius_coupon_url_application.controller.action.apply_coupon

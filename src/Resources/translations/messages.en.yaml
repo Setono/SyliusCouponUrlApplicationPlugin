@@ -5,3 +5,4 @@ setono_sylius_coupon_url_application:
     ui:
         apply_coupon: Apply coupon code to your order
         url: URL
+        use_other_base_url: Use other base URL...

@@ -1,4 +1,6 @@
 <div class="ui info message">
-    <div class="header">Apply coupon code using an URL</div>
-    <p><a class="ui primary button" href="{{ path('setono_sylius_coupon_url_application_shop_apply_coupon') }}">Go!</a></p>
+    <div class="header">Apply coupon code directly</div>
+    {{ render(url('setono_sylius_coupon_url_application_shop_partial_apply_coupon')) }}
+
+    <p><a class="ui primary button" href="{{ path('setono_sylius_coupon_url_application_shop_apply_coupon') }}">Or go to the coupon form</a></p>
 </div>
