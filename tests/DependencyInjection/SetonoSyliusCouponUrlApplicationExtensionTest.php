@@ -25,5 +25,10 @@ final class SetonoSyliusCouponUrlApplicationExtensionTest extends AbstractExtens
     public function after_loading_the_correct_parameter_has_been_set(): void
     {
         $this->load();
+
+        $this->assertContainerBuilderHasService('setono_sylius_coupon_url_application.controller.action.apply_coupon');
+        $this->assertContainerBuilderHasService('setono_sylius_coupon_url_application.event_subscriber.admin.add_url_column_to_coupon_grid');
+        $this->assertContainerBuilderHasService('setono_sylius_coupon_url_application.event_subscriber.apply_coupon');
+        $this->assertContainerBuilderHasService('setono_sylius_coupon_url_application.form.type.apply_coupon');
     }
 }
