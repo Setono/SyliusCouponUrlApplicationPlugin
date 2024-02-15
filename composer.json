@@ -26,7 +26,6 @@
         "symfony/http-kernel": "^5.4 || ^6.4 || ^7.0",
         "symfony/mailer": "^5.4 || ^6.4 || ^7.0",
         "symfony/options-resolver": "^5.4 || ^6.4 || ^7.0",
-        "symfony/routing": "^5.4 || ^6.4 || ^7.0",
         "twig/twig": "^2.15 || ^3.0",
         "webmozart/assert": "^1.11"
     },
