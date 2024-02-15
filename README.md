@@ -7,7 +7,7 @@
 [![Mutation testing][ico-infection]][link-infection]
 
 Apply coupons by going to `example.com/coupon` or directly from the URL by going to
-`example.com/coupon?coupon=CODE&redirect=URL`.
+`example.com/?coupon=CODE`.
 
 ## Installation
 
