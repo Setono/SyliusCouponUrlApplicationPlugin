@@ -15,15 +15,6 @@ Apply coupons by going to `example.com/coupon` or directly from the URL by going
 composer require setono/sylius-coupon-url-application-plugin
 ```
 
-### Import configuration
-
-```yaml
-# config/packages/setono_sylius_coupon_url_application.yaml
-imports:
-    # ...
-    - { resource: "@SetonoSyliusCouponUrlApplicationPlugin/Resources/config/app/config.yaml" }
-```
-
 ### Import routing
 
 ```yaml
@@ -49,7 +40,7 @@ php bin/console assets:install
 [ico-version]: https://poser.pugx.org/setono/sylius-coupon-url-application-plugin/v/stable
 [ico-license]: https://poser.pugx.org/setono/sylius-coupon-url-application-plugin/license
 [ico-github-actions]: https://github.com/Setono/SyliusCouponUrlApplicationPlugin/workflows/build/badge.svg
-[ico-code-coverage]: https://codecov.io/gh/Setono/SyliusCouponUrlApplicationPlugin/branch/master/graph/badge.svg
+[ico-code-coverage]: https://codecov.io/gh/Setono/SyliusCouponUrlApplicationPlugin/graph/badge.svg
 [ico-infection]: https://img.shields.io/endpoint?style=flat&url=https%3A%2F%2Fbadge-api.stryker-mutator.io%2Fgithub.com%2FSetono%2FSyliusCouponUrlApplicationPlugin%2F2.x
 
 [link-packagist]: https://packagist.org/packages/setono/sylius-coupon-url-application-plugin
