@@ -1,5 +1,3 @@
 {# @var data \Sylius\Component\Core\Model\PromotionCouponInterface #}
 
-{% set url = url('sylius_shop_homepage', {'coupon': data.code}) %}
-
-<span class="coupon-url" data-coupon="{{ data.code }}" data-base-url="{{ url('sylius_shop_homepage') }}">{{ url }}</span>
+<span class="coupon-url" data-coupon="{{ data.code }}" data-base-url="{{ url('sylius_shop_homepage') }}">{{ url('sylius_shop_homepage', {'coupon': data.code}) }}</span>
