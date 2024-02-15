@@ -4,11 +4,16 @@ window.addEventListener('DOMContentLoaded', (event) => {
         return;
     }
 
-    urlHeader.innerHTML = urlHeader.innerHTML + ' <div class="ui input"><input type="text" placeholder="Add redirect to URL..." id="coupon-url-redirect"></div>';
+    urlHeader.innerHTML = '<div style="display:flex; flex-wrap: nowrap; align-items: center; gap: 10px">' +
+        '<div>' + urlHeader.innerHTML + '</div>' +
+        '<div class="ui input" style="flex-grow: 1"><input type="text" placeholder="' + setono_sylius_coupon_url_application.translations.use_other_base_url + '" id="coupon-base-url"></div>' +
+    '</div>';
 
-    document.querySelector('#coupon-url-redirect').addEventListener('keyup', (e) => {
+    document.querySelector('#coupon-base-url').addEventListener('keyup', (e) => {
         document.querySelectorAll('.coupon-url').forEach((item) => {
-            item.innerHTML = item.dataset.url + '&redirect=' + encodeURIComponent(e.currentTarget.value);
+            const url = '' === e.currentTarget.value ? item.dataset.baseUrl : e.currentTarget.value;
+
+            item.innerHTML = url + '?coupon=' + item.dataset.coupon;
         });
     });
 });

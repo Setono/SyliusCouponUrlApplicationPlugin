@@ -8,7 +8,7 @@
         "sylius-plugin"
     ],
     "require": {
-        "php": ">=8.0",
+        "php": ">=8.1",
         "doctrine/persistence": "^2.5 || ^3.0",
         "setono/doctrine-object-manager-trait": "^1.1",
         "sylius/core": "^1.0",

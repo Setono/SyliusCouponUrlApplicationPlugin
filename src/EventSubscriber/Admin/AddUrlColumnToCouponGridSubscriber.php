@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Setono\SyliusCouponUrlApplicationPlugin\EventSubscriber;
+namespace Setono\SyliusCouponUrlApplicationPlugin\EventSubscriber\Admin;
 
 use Sylius\Component\Grid\Definition\Field;
 use Sylius\Component\Grid\Event\GridDefinitionConverterEvent;

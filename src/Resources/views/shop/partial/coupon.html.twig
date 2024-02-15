@@ -1,0 +1,7 @@
+{% form_theme form '@SyliusShop/Form/theme.html.twig' %}
+
+{{ form_start(form, {'method': 'get', 'attr': {'class': 'ui form'}}) }}
+    {{ form_row(form.coupon) }}
+
+    <button type="submit" class="ui teal icon labeled button"><i class="ticket icon"></i> {{ 'sylius.ui.apply_coupon'|trans }}</button>
+{{ form_end(form) }}
