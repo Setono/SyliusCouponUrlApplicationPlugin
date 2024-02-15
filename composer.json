@@ -24,7 +24,6 @@
         "symfony/form": "^5.4 || ^6.4 || ^7.0",
         "symfony/http-foundation": "^5.4 || ^6.4 || ^7.0",
         "symfony/http-kernel": "^5.4 || ^6.4 || ^7.0",
-        "symfony/mailer": "^5.4 || ^6.4 || ^7.0",
         "symfony/options-resolver": "^5.4 || ^6.4 || ^7.0",
         "twig/twig": "^2.15 || ^3.0",
         "webmozart/assert": "^1.11"
@@ -74,11 +73,6 @@
             "symfony/thanks": false
         },
         "sort-packages": true
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "1.0-dev"
-        }
     },
     "scripts": {
         "analyse": "psalm",
