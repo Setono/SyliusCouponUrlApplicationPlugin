@@ -16,7 +16,6 @@ return static function (ContainerConfigurator $container): void {
             service('form.factory'),
             service('twig'),
             service('sylius.context.cart'),
-            service('request_stack'),
         ])
         ->public()
         ->tag('controller.service_arguments')

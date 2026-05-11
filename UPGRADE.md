@@ -63,6 +63,14 @@ container by id needs to update.
 | ------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
 | `Setono\SyliusCouponUrlApplicationPlugin\EventSubscriber\Admin\AddUrlColumnToCouponGridSubscriber`      | (none — column is declared via `sylius_grid` config from the bundle's `prepend()`)       |
 
+### Removed shop route, template, and sub-request branching
+
+The `/_partial/coupon` route (`setono_sylius_coupon_url_application_shop_partial_apply_coupon`) and its template `templates/shop/partial/coupon.html.twig` have been removed. They existed in 2.x so that consumers embedding the coupon form via `{{ render(path('setono_sylius_coupon_url_application_shop_apply_coupon')) }}` would render the form without the shop layout wrapper.
+
+In Sylius 2 the cart page (`/cart`) ships its own native coupon input via the Sylius admin's cart Live Component (hook `sylius_shop.cart.index.content.form.sections.general#left`, template `@SyliusShop/cart/index/content/form/sections/general/coupon.html.twig`). Use that instead — it integrates directly with the cart form's `promotionCoupon` field and re-renders inline without a sub-request.
+
+As a side effect, `ApplyCouponAction` no longer injects `RequestStack` or branches on `isMainRequest`; it always renders `@SetonoSyliusCouponUrlApplicationPlugin/shop/coupon.html.twig`.
+
 ### Doctrine
 
 `ApplyCouponSubscriber` now uses `Setono\Doctrine\ORMTrait` from

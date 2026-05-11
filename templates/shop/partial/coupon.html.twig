@@ -1,7 +1,0 @@
-{% form_theme form '@SyliusShop/form/theme.html.twig' %}
-
-{{ form_start(form, {'method': 'get', 'attr': {'class': 'd-grid gap-3'}}) }}
-    {{ form_row(form.coupon) }}
-
-    <button type="submit" class="btn btn-primary">{{ 'sylius.ui.apply_coupon'|trans }}</button>
-{{ form_end(form) }}

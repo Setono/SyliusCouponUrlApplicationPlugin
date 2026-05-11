@@ -10,7 +10,6 @@ use Sylius\Component\Order\Context\CartContextInterface;
 use Sylius\Component\Order\Model\OrderInterface as BaseOrderInterface;
 use Symfony\Component\Form\FormFactoryInterface;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Session\Session;
 use Twig\Environment;
@@ -22,14 +21,11 @@ final readonly class ApplyCouponAction
         private FormFactoryInterface $formFactory,
         private Environment $twig,
         private CartContextInterface $cartContext,
-        private RequestStack $requestStack,
     ) {
     }
 
     public function __invoke(Request $request): Response
     {
-        $isMainRequest = $request === $this->requestStack->getMainRequest();
-
         /** @var OrderInterface|BaseOrderInterface $cart */
         $cart = $this->cartContext->getCart();
         Assert::isInstanceOf($cart, OrderInterface::class);
@@ -40,7 +36,7 @@ final readonly class ApplyCouponAction
             'csrf_protection' => false,
         ]);
 
-        if ($isMainRequest && null !== $coupon) {
+        if (null !== $coupon) {
             $session = $request->getSession();
             if ($session instanceof Session) {
                 $session->getFlashBag()->add('info', [
@@ -50,9 +46,7 @@ final readonly class ApplyCouponAction
             }
         }
 
-        $template = $isMainRequest ? '@SetonoSyliusCouponUrlApplicationPlugin/shop/coupon.html.twig' : '@SetonoSyliusCouponUrlApplicationPlugin/shop/partial/coupon.html.twig';
-
-        return new Response($this->twig->render($template, [
+        return new Response($this->twig->render('@SetonoSyliusCouponUrlApplicationPlugin/shop/coupon.html.twig', [
             'form' => $form->createView(),
         ]));
     }
