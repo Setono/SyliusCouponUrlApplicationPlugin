@@ -7,6 +7,9 @@ namespace Setono\SyliusCouponUrlApplicationPlugin;
 use Sylius\Bundle\CoreBundle\Application\SyliusPluginTrait;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
+/**
+ * @codeCoverageIgnore
+ */
 final class SetonoSyliusCouponUrlApplicationPlugin extends Bundle
 {
     use SyliusPluginTrait;
