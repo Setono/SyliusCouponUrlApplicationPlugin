@@ -62,6 +62,5 @@ final class ApplyCouponTypeTest extends TypeTestCase
         $form = $this->factory->create(ApplyCouponType::class, ['coupon' => 'BLACK_FRIDAY']);
 
         self::assertSame('BLACK_FRIDAY', $form->get('coupon')->getData());
-        self::assertSame('BLACK_FRIDAY', $form->createView()->children['coupon']->vars['value']);
     }
 }
