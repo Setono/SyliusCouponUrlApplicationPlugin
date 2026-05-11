@@ -1,0 +1,12 @@
+{# @var data \Sylius\Component\Core\Model\PromotionCouponInterface #}
+
+<button type="button"
+        class="btn btn-sm"
+        data-bs-toggle="modal"
+        data-bs-target="#setono-coupon-url-modal"
+        data-coupon-code="{{ data.code }}"
+        data-bs-original-title="{{ action.label|trans }}"
+        aria-label="{{ action.label|trans }}"
+>
+    {% if action.icon is not null %}{{ ux_icon(action.icon) }}{% endif %}
+</button>

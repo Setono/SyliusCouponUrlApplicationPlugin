@@ -4,5 +4,10 @@ setono_sylius_coupon_url_application:
             code: Kupongkode
     ui:
         apply_coupon: Bruk kupongkode på bestillingen din
-        url: URL
-        use_other_base_url: Bruk en annen basis-URL
+        show_url: Vis URL
+        modal:
+            title: Kupong-URL
+            base_url: Basis-URL
+            url: URL
+            copy: Kopier
+            copied: URL kopiert til utklippstavlen

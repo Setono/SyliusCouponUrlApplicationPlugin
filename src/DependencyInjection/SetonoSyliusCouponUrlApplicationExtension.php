@@ -23,13 +23,13 @@ final class SetonoSyliusCouponUrlApplicationExtension extends Extension implemen
         $container->prependExtensionConfig('sylius_grid', [
             'grids' => [
                 'sylius_admin_promotion_coupon' => [
-                    'fields' => [
-                        'url' => [
-                            'type' => 'twig',
-                            'label' => 'setono_sylius_coupon_url_application.ui.url',
-                            'path' => '.',
-                            'options' => [
-                                'template' => '@SetonoSyliusCouponUrlApplicationPlugin/admin/promotion_coupon/grid/field/url.html.twig',
+                    'actions' => [
+                        'item' => [
+                            'show_url' => [
+                                'type' => 'default',
+                                'label' => 'setono_sylius_coupon_url_application.ui.show_url',
+                                'icon' => 'tabler:link',
+                                'template' => '@SetonoSyliusCouponUrlApplicationPlugin/admin/promotion_coupon/grid/action/show_url.html.twig',
                             ],
                         ],
                     ],
@@ -40,6 +40,9 @@ final class SetonoSyliusCouponUrlApplicationExtension extends Extension implemen
         $container->prependExtensionConfig('sylius_twig_hooks', [
             'hooks' => [
                 'sylius_admin.promotion_coupon.index#javascripts' => [
+                    'setono_sylius_coupon_url_application_modal' => [
+                        'template' => '@SetonoSyliusCouponUrlApplicationPlugin/admin/promotion_coupon/_modal.html.twig',
+                    ],
                     'setono_sylius_coupon_url_application_scripts' => [
                         'template' => '@SetonoSyliusCouponUrlApplicationPlugin/admin/promotion_coupon/_javascripts.html.twig',
                     ],

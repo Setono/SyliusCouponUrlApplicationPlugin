@@ -22,22 +22,27 @@ or extended template paths, update them as follows:
 | `@SetonoSyliusCouponUrlApplicationPlugin/Resources/config/routes_no_locale.yaml` | `@SetonoSyliusCouponUrlApplicationPlugin/config/routes_no_locale.yaml` |
 | `@SetonoSyliusCouponUrlApplicationPlugin/Resources/views/...`                    | `@SetonoSyliusCouponUrlApplicationPlugin/...`                          |
 
-### Admin coupon list customisation moved to Twig hooks
+### Admin coupon list: "Show URL" action replaces the URL column
 
-In 2.x the plugin added the **URL** column and the "Use other base URL" input
+In 2.x the plugin added a **URL** column and a "Use other base URL" text input
 to the admin promotion-coupon grid via a `sylius_ui` event override and a
 runtime `GridDefinitionConverterEvent` subscriber. Sylius 2.x removed
-`sylius_ui` events; both pieces are now registered automatically via the
-plugin's bundle extension:
+`sylius_ui` events, and the column-plus-inline-input pattern doesn't fit the
+Sylius 2 admin look. The plugin now ships a per-row **Show URL** item action
+instead:
 
-- The **URL** column is appended to `sylius_admin_promotion_coupon` via
-  `$container->prependExtensionConfig('sylius_grid', [...])`.
-- The "Use other base URL" JS partial is hooked into
-  `sylius_admin.promotion_coupon.index#javascripts` via
-  `$container->prependExtensionConfig('sylius_twig_hooks', [...])`.
+- The action is added to `sylius_admin_promotion_coupon` via
+  `$container->prependExtensionConfig('sylius_grid', [...])` with a custom
+  template that renders a Bootstrap 5 modal trigger button.
+- A single shared modal (`templates/admin/promotion_coupon/_modal.html.twig`)
+  and the supporting JS (`public/js/coupon-url-modal.js`) are injected into
+  the `sylius_admin.promotion_coupon.index#javascripts` hookpoint.
+- The modal lets the admin edit the base URL inline, copy the resulting URL
+  to the clipboard, and remembers the last-used base URL across rows in
+  `localStorage`.
 
 You do not need to import or configure anything in your app — the plugin
-ships both registrations from `SetonoSyliusCouponUrlApplicationExtension::prepend()`.
+ships all registrations from `SetonoSyliusCouponUrlApplicationExtension::prepend()`.
 
 ### Removed services
 
