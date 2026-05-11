@@ -1,0 +1,5 @@
+setono_sylius_coupon_url_application:
+    coupon_applied: Le code de réduction est maintenant activé dans votre panier
+    coupon_applied_not_fulfilled: Votre panier ne contient pas les articles, montants ou ne remplit pas les autres critères nécessaires à l'utilisation de votre code de réduction. Lisez les critères du code de réduction à l'endroit où vous l'avez reçu (e-mail, newsletter ou autre)
+    coupon_not_eligible: Le code de réduction n'est plus valide. Cela peut être dû à son expiration, à l'épuisement de sa limite d'utilisation ou à autre chose
+    coupon_already_applied: NOTEZ que vous avez déjà ajouté un code de réduction (%code%) à votre commande et que vous l'écraserez si vous en ajoutez un nouveau

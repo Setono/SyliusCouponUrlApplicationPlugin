@@ -87,15 +87,27 @@ Jobs: `backwards-compatibility`, `coding-standards`, `dependency-analysis`, `sta
 - Prefer **relative paths** in shell commands. Absolute paths inside this working directory trigger a Claude Code permission prompt; relative paths run without one. If you `cd` into `tests/Application/` for a step, `cd` back to the project root before subsequent commands rather than chaining absolute paths.
 - Run the test-app console from the project root via `./tests/Application/bin/console <cmd>` instead of `cd tests/Application && bin/console <cmd>` — same result, no `cd` round-trip.
 - Before each commit, run `composer fix-style`, `composer analyse`, and `composer phpunit` and fix what they flag. CI runs all three across the PHP/Symfony matrix, so catching failures locally is cheaper than waiting for the runner.
-- When adding or renaming a translation key, update **every** locale file in `translations/` — both domains (`messages.*.yaml` and `flashes.*.yaml`) and all three locales (`en`, `da`, `no`). Missing entries silently render the raw key in the shop UI. Run `./tests/Application/bin/console lint:yaml translations` after editing to catch syntax breaks.
+- When adding or renaming a translation key, update **every** locale file in `translations/` listed in the **Translations** section below (both `messages.*.yaml` and `flashes.*.yaml`). Missing entries silently render the raw key in the shop UI. Run `./tests/Application/bin/console lint:yaml translations` after editing to catch syntax breaks.
 - When you change a UI surface — the `/coupon` page, the partial template, the admin Show URL action, the modal, or the JS in `public/js/coupon-url-modal.js` — verify it in a browser via the Playwright MCP. PHPUnit/PHPStan/ECS won't catch broken Twig hooks, missing JS, or layout regressions.
 - When you make a breaking change a plugin user would need to act on during a major-version upgrade (default-value flips, renamed/removed public classes or services, template-path moves, changed model APIs, removed config keys), document it in `UPGRADE.md` under the relevant "Upgrading from X to Y" section. Skip changes that consumers don't have to react to: dev tooling, listener-priority tweaks, translation-key additions, and other internal refactors.
 - When you ship a change that affects what the plugin does for end users — new feature surfaces, new configuration keys, behavior shifts, removed UI — update `README.md` to describe the current state.
 
+## Translations
+
+Source locale is English. Following the Setono plugin skeleton, the plugin is shipped translated into:
+
+- Nordic: Danish (`da`), Swedish (`sv`), Norwegian (`no`), Finnish (`fi`)
+- Large EU: German (`de`), French (`fr`), Spanish (`es`), Italian (`it`), Dutch (`nl`), Polish (`pl`)
+- Other common Sylius locales: Portuguese (`pt`), Czech (`cs`), Hungarian (`hu`), Romanian (`ro`), Ukrainian (`uk`)
+
+Translation files live in `translations/` and follow Symfony's `<domain>.<locale>.<format>` naming (`messages.<locale>.yaml`, `flashes.<locale>.yaml`).
+
+**Whenever you add a new translation key, you must add it to every locale above — not just `en`.** Missing locale entries are silently rendered as the raw key in admin/shop UI. The same rule applies in reverse: if you remove or rename a key, do it in all locale files in the same change. Run `./tests/Application/bin/console lint:yaml translations` after editing to catch syntax breaks across the set.
+
 ## Conventions
 
 - All PHP files use `declare(strict_types=1);`. Classes are `final` (skeleton convention); entities (none today) would be the exception.
-- Translation keys are namespaced under `setono_sylius_coupon_url_application.*`; English/Danish/Norwegian translations live in `translations/`.
+- Translation keys are namespaced under `setono_sylius_coupon_url_application.*`. See the **Translations** section above for the full locale matrix.
 - When touching `config/` or `templates/`, remember CI lints YAML and Twig via the test Sylius app — keep paths and the bundle alias `@SetonoSyliusCouponUrlApplicationPlugin` intact.
 - **Service configuration is PHP DSL** (`config/services.php`). Each services file declares `namespace Symfony\Component\DependencyInjection\Loader\Configurator;` at the top so `service()`, `param()`, etc. resolve as bare function calls without `use function` imports. Don't ship XML service config — that's the v1 layout, gone in 3.0.
 - **All new services use their FQCN as the service id** (e.g. `$services->set(ApplyCouponAction::class)`), not snake-cased aliases. This matches Symfony's autowiring conventions and lets consumers override or decorate by class name.

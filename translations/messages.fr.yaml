@@ -1,0 +1,13 @@
+setono_sylius_coupon_url_application:
+    form:
+        apply_coupon:
+            code: Code de réduction
+    ui:
+        apply_coupon: Appliquer le code de réduction à votre commande
+        show_url: Afficher l'URL
+        modal:
+            title: URL du code de réduction
+            base_url: URL de base
+            url: URL
+            copy: Copier
+            copied: URL copiée dans le presse-papiers

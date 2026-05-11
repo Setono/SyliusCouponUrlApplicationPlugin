@@ -1,0 +1,13 @@
+setono_sylius_coupon_url_application:
+    form:
+        apply_coupon:
+            code: Kód kupónu
+    ui:
+        apply_coupon: Použít kód kupónu na vaši objednávku
+        show_url: Zobrazit URL
+        modal:
+            title: URL kupónu
+            base_url: Základní URL
+            url: URL
+            copy: Kopírovat
+            copied: URL zkopírována do schránky

@@ -1,0 +1,13 @@
+setono_sylius_coupon_url_application:
+    form:
+        apply_coupon:
+            code: Kortingscode
+    ui:
+        apply_coupon: Pas de kortingscode toe op uw bestelling
+        show_url: URL tonen
+        modal:
+            title: Kortingscode-URL
+            base_url: Basis-URL
+            url: URL
+            copy: Kopiëren
+            copied: URL gekopieerd naar klembord

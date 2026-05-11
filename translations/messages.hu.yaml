@@ -1,0 +1,13 @@
+setono_sylius_coupon_url_application:
+    form:
+        apply_coupon:
+            code: Kuponkód
+    ui:
+        apply_coupon: Kuponkód alkalmazása a megrendelésére
+        show_url: URL megjelenítése
+        modal:
+            title: Kupon-URL
+            base_url: Alap-URL
+            url: URL
+            copy: Másolás
+            copied: URL a vágólapra másolva

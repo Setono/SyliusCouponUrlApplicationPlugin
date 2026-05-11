@@ -1,0 +1,13 @@
+setono_sylius_coupon_url_application:
+    form:
+        apply_coupon:
+            code: Cod cupon
+    ui:
+        apply_coupon: Aplică codul cuponului la comanda ta
+        show_url: Afișează URL
+        modal:
+            title: URL-ul cuponului
+            base_url: URL de bază
+            url: URL
+            copy: Copiază
+            copied: URL copiat în clipboard

@@ -1,0 +1,13 @@
+setono_sylius_coupon_url_application:
+    form:
+        apply_coupon:
+            code: Código de cupón
+    ui:
+        apply_coupon: Aplicar código de cupón a su pedido
+        show_url: Mostrar URL
+        modal:
+            title: URL del cupón
+            base_url: URL base
+            url: URL
+            copy: Copiar
+            copied: URL copiada al portapapeles

@@ -1,0 +1,5 @@
+setono_sylius_coupon_url_application:
+    coupon_applied: El código de cupón ya está activado en su carrito
+    coupon_applied_not_fulfilled: Su carrito no contiene los artículos, importes o no cumple los demás criterios necesarios para usar su código de cupón. Lea sobre los criterios del código de cupón donde lo recibió (correo electrónico, boletín u otro)
+    coupon_not_eligible: El código de cupón ya no es válido. Esto puede deberse a que ha caducado, ha agotado su límite de uso u otro motivo
+    coupon_already_applied: TENGA EN CUENTA que ya ha añadido un código de cupón (%code%) a su pedido y lo sobrescribirá si añade uno nuevo

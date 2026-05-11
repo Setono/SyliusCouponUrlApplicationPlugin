@@ -1,0 +1,13 @@
+setono_sylius_coupon_url_application:
+    form:
+        apply_coupon:
+            code: Alennuskoodi
+    ui:
+        apply_coupon: Käytä alennuskoodia tilauksessasi
+        show_url: Näytä URL
+        modal:
+            title: Alennuskoodin URL
+            base_url: Perus-URL
+            url: URL
+            copy: Kopioi
+            copied: URL kopioitu leikepöydälle
