@@ -83,6 +83,7 @@ Jobs: `backwards-compatibility`, `coding-standards`, `dependency-analysis`, `sta
 
 ## Working in this repo
 
+- **Never commit or push unless the user explicitly asks.** Make the edits, run the quality tools, leave the working tree dirty, and report what's ready. The user reviews the diff before the commit happens. This applies even after a previous "commit and push" — that authorization stands only for the scope just requested, not for subsequent changes.
 - Prefer **relative paths** in shell commands. Absolute paths inside this working directory trigger a Claude Code permission prompt; relative paths run without one. If you `cd` into `tests/Application/` for a step, `cd` back to the project root before subsequent commands rather than chaining absolute paths.
 - Run the test-app console from the project root via `./tests/Application/bin/console <cmd>` instead of `cd tests/Application && bin/console <cmd>` — same result, no `cd` round-trip.
 - Before each commit, run `composer fix-style`, `composer analyse`, and `composer phpunit` and fix what they flag. CI runs all three across the PHP/Symfony matrix, so catching failures locally is cheaper than waiting for the runner.
