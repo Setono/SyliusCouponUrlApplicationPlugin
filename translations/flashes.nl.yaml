@@ -1,5 +1,4 @@
 setono_sylius_coupon_url_application:
     coupon_applied: De kortingscode is nu geactiveerd in uw winkelwagen
-    coupon_applied_not_fulfilled: Uw winkelwagen bevat niet de artikelen, bedragen of voldoet niet aan de andere criteria die nodig zijn om uw kortingscode te gebruiken. Lees de criteria voor de kortingscode na op de plaats waar u hem ontvangen heeft (e-mail, nieuwsbrief of andere)
+    coupon_applied_not_fulfilled: De kortingscode is opgeslagen in uw winkelwagen, maar de korting is nog niet actief omdat uw winkelwagen niet de artikelen, bedragen of andere door de kortingscode vereiste criteria bevat. Lees de criteria voor de kortingscode na op de plaats waar u hem ontvangen heeft (e-mail, nieuwsbrief of andere)
     coupon_not_eligible: De kortingscode is niet meer geldig. Dit kan komen doordat hij is verlopen, zijn gebruikslimiet is bereikt of door iets anders
-    coupon_already_applied: LET OP dat u al een kortingscode (%code%) aan uw bestelling heeft toegevoegd en dat u die overschrijft als u een nieuwe toevoegt

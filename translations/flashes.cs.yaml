@@ -1,5 +1,4 @@
 setono_sylius_coupon_url_application:
     coupon_applied: Kód kupónu je nyní aktivován ve vašem košíku
-    coupon_applied_not_fulfilled: Váš košík neobsahuje položky, částky nebo nesplňuje další kritéria nezbytná pro použití vašeho kódu kupónu. Přečtěte si kritéria pro kód kupónu tam, kde jste jej obdrželi (e-mail, newsletter nebo jiné)
+    coupon_applied_not_fulfilled: Kód kupónu je uložen ve vašem košíku, ale sleva ještě není aktivní, protože váš košík neobsahuje položky, částky nebo nesplňuje další kritéria vyžadovaná kupónem. Přečtěte si kritéria pro kód kupónu tam, kde jste jej obdrželi (e-mail, newsletter nebo jiné)
     coupon_not_eligible: Kód kupónu již není platný. Může to být tím, že vypršela jeho platnost, byl vyčerpán limit jeho použití nebo z jiného důvodu
-    coupon_already_applied: VEZMĚTE NA VĚDOMÍ, že jste do své objednávky již přidali kód kupónu (%code%) a přidáním nového jej přepíšete

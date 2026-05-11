@@ -1,5 +1,4 @@
 setono_sylius_coupon_url_application:
     coupon_applied: A kuponkód aktiválva van a kosarában
-    coupon_applied_not_fulfilled: A kosara nem tartalmazza azokat a tételeket, összegeket vagy nem teljesíti azokat a feltételeket, amelyek a kuponkód használatához szükségesek. Olvassa el a kuponkód feltételeit ott, ahol megkapta (e-mail, hírlevél vagy egyéb)
+    coupon_applied_not_fulfilled: A kuponkód mentve van a kosarában, de a kedvezmény még nem aktív, mert a kosara nem tartalmazza azokat a tételeket, összegeket vagy nem teljesíti a kuponkód által megkövetelt egyéb feltételeket. Olvassa el a kuponkód feltételeit ott, ahol megkapta (e-mail, hírlevél vagy egyéb)
     coupon_not_eligible: A kuponkód már nem érvényes. Ennek oka lehet, hogy lejárt, kimerült a felhasználási korlátja vagy más
-    coupon_already_applied: KÉRJÜK, VEGYE FIGYELEMBE, hogy már hozzáadott egy kuponkódot (%code%) a megrendeléséhez, és ezt felülírja, ha újat ad hozzá

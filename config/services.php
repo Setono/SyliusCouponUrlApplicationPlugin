@@ -29,6 +29,7 @@ return static function (ContainerConfigurator $container): void {
         ->args([
             service('sylius.repository.promotion_coupon'),
             service('sylius.checker.promotion_coupon_eligibility'),
+            service('sylius.checker.promotion_eligibility'),
             service('sylius.context.cart'),
             service('sylius.order_processing.order_processor'),
             service('doctrine'),
