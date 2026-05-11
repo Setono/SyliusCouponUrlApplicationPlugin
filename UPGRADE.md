@@ -71,6 +71,33 @@ In Sylius 2 the cart page (`/cart`) ships its own native coupon input via the Sy
 
 As a side effect, `ApplyCouponAction` no longer injects `RequestStack` or branches on `isMainRequest`; it always renders `@SetonoSyliusCouponUrlApplicationPlugin/shop/coupon.html.twig`.
 
+### Flash-message behaviour change for `?coupon=…`
+
+When a customer clicks a coupon URL on a cart that doesn't yet satisfy the
+underlying promotion's rules (e.g. minimum cart total, taxon allow-list,
+etc.), 2.x always fired the `success` flash `coupon_applied`. 3.x now runs
+a second eligibility check (`PromotionEligibilityCheckerInterface`,
+service `sylius.checker.promotion_eligibility`) after attaching the coupon
+and fires the `info` flash `coupon_applied_not_fulfilled` instead in that
+case — the coupon is still attached, but the discount won't activate
+until the cart qualifies. See `README.md` for the consumer-facing
+explanation.
+
+Translation impact:
+
+- `coupon_already_applied` translation key has been removed entirely.
+  `ApplyCouponAction` no longer surfaces "already applied" as a flash;
+  the form simply pre-populates with the current cart coupon code, and
+  any further reapply attempts produce one of the existing
+  `coupon_applied` / `coupon_applied_not_fulfilled` / `coupon_not_eligible`
+  outcomes. If you overrode `setono_sylius_coupon_url_application.coupon_already_applied`
+  in your app's `translations/`, you can delete that override.
+- `coupon_applied_not_fulfilled` wording has been rewritten across all
+  shipped locales to lead with the positive outcome ("The coupon code is
+  saved in your cart, but the discount is not active yet…") instead of
+  the previous rejection-sounding wording. If you overrode this key in
+  your app, review the new shipped phrasing and update your override.
+
 ### Doctrine
 
 `ApplyCouponSubscriber` now uses `Setono\Doctrine\ORMTrait` from

@@ -76,9 +76,9 @@ in an email *before* shopping, not after.
 [ico-license]: https://poser.pugx.org/setono/sylius-coupon-url-application-plugin/license
 [ico-github-actions]: https://github.com/Setono/SyliusCouponUrlApplicationPlugin/workflows/build/badge.svg
 [ico-code-coverage]: https://codecov.io/gh/Setono/SyliusCouponUrlApplicationPlugin/graph/badge.svg
-[ico-infection]: https://img.shields.io/endpoint?style=flat&url=https%3A%2F%2Fbadge-api.stryker-mutator.io%2Fgithub.com%2FSetono%2FSyliusCouponUrlApplicationPlugin%2F2.x
+[ico-infection]: https://img.shields.io/endpoint?style=flat&url=https%3A%2F%2Fbadge-api.stryker-mutator.io%2Fgithub.com%2FSetono%2FSyliusCouponUrlApplicationPlugin%2F3.x
 
 [link-packagist]: https://packagist.org/packages/setono/sylius-coupon-url-application-plugin
 [link-github-actions]: https://github.com/Setono/SyliusCouponUrlApplicationPlugin/actions
 [link-code-coverage]: https://codecov.io/gh/Setono/SyliusCouponUrlApplicationPlugin
-[link-infection]: https://dashboard.stryker-mutator.io/reports/github.com/Setono/SyliusCouponUrlApplicationPlugin/2.x
+[link-infection]: https://dashboard.stryker-mutator.io/reports/github.com/Setono/SyliusCouponUrlApplicationPlugin/3.x
