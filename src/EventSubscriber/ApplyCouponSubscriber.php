@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Setono\SyliusCouponUrlApplicationPlugin\EventSubscriber;
 
 use Doctrine\Persistence\ManagerRegistry;
-use Setono\DoctrineObjectManagerTrait\ORM\ORMManagerTrait;
+use Setono\Doctrine\ORMTrait;
 use Sylius\Component\Core\Model\OrderInterface;
 use Sylius\Component\Order\Context\CartContextInterface;
 use Sylius\Component\Order\Model\OrderInterface as BaseOrderInterface;
@@ -22,7 +22,7 @@ use Webmozart\Assert\Assert;
 
 final class ApplyCouponSubscriber implements EventSubscriberInterface
 {
-    use ORMManagerTrait;
+    use ORMTrait;
 
     public function __construct(
         private readonly PromotionCouponRepositoryInterface $promotionCouponRepository,

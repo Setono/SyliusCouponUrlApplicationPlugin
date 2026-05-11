@@ -20,7 +20,7 @@ composer require setono/sylius-coupon-url-application-plugin
 ```yaml
 # config/routes/setono_sylius_coupon_url_application.yaml
 setono_sylius_coupon_url_application:
-    resource: "@SetonoSyliusCouponUrlApplicationPlugin/Resources/config/routes.yaml"
+    resource: "@SetonoSyliusCouponUrlApplicationPlugin/config/routes.yaml"
 ```
 
 or if your app doesn't use locales:
@@ -28,7 +28,7 @@ or if your app doesn't use locales:
 ```yaml
 # config/routes/setono_sylius_coupon_url_application.yaml
 setono_sylius_coupon_url_application:
-    resource: "@SetonoSyliusCouponUrlApplicationPlugin/Resources/config/routes_no_locale.yaml"
+    resource: "@SetonoSyliusCouponUrlApplicationPlugin/config/routes_no_locale.yaml"
 ```
 
 ### Install assets

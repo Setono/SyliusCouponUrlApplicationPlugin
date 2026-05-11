@@ -16,13 +16,13 @@ use Symfony\Component\HttpFoundation\Session\Session;
 use Twig\Environment;
 use Webmozart\Assert\Assert;
 
-final class ApplyCouponAction
+final readonly class ApplyCouponAction
 {
     public function __construct(
-        private readonly FormFactoryInterface $formFactory,
-        private readonly Environment $twig,
-        private readonly CartContextInterface $cartContext,
-        private readonly RequestStack $requestStack,
+        private FormFactoryInterface $formFactory,
+        private Environment $twig,
+        private CartContextInterface $cartContext,
+        private RequestStack $requestStack,
     ) {
     }
 

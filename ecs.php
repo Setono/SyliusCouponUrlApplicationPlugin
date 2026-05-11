@@ -4,14 +4,15 @@ declare(strict_types=1);
 
 use Symplify\EasyCodingStandard\Config\ECSConfig;
 
-return static function (ECSConfig $configurator): void {
-    $configurator->import('vendor/sylius-labs/coding-standard/ecs.php');
-    $configurator->paths([
+return static function (ECSConfig $config): void {
+    $config->import('vendor/sylius-labs/coding-standard/ecs.php');
+    $config->paths([
         'src',
         'tests',
+        'composer-dependency-analyser.php',
+        'rector.php',
     ]);
-    $configurator->skip([
-        'tests/Application/node_modules/**',
-        'tests/Application/var/**',
+    $config->skip([
+        'tests/Application/**',
     ]);
 };
