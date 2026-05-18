@@ -71,3 +71,11 @@ jobs:
             -   uses: "setono/sylius-plugin/mutation-tests@v2"
                 with:
                     stryker-dashboard-api-key: "${{ secrets.STRYKER_DASHBOARD_API_KEY }}"
+
+    code-coverage:
+        runs-on: "ubuntu-latest"
+        steps:
+            -   uses: "setono/sylius-plugin/code-coverage@v2"
+                with:
+                    codecov-token: "${{ secrets.CODECOV_TOKEN }}"
+                    testsuite: "unit"
