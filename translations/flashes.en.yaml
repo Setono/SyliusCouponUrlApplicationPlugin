@@ -1,0 +1,4 @@
+setono_sylius_coupon_url_application:
+    coupon_applied: The coupon code is now activated in your cart
+    coupon_applied_not_fulfilled: The coupon code is saved in your cart, but the discount is not active yet because your cart does not contain the items, amounts or meet other criteria that the coupon requires. Check the criteria where you received the code (email, newsletter or other)
+    coupon_not_eligible: The coupon code is no longer valid. This may be because it has expired, has exhausted its usage limit or something else

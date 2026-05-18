@@ -7,7 +7,15 @@ namespace Setono\SyliusCouponUrlApplicationPlugin;
 use Sylius\Bundle\CoreBundle\Application\SyliusPluginTrait;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
+/**
+ * @codeCoverageIgnore
+ */
 final class SetonoSyliusCouponUrlApplicationPlugin extends Bundle
 {
     use SyliusPluginTrait;
+
+    public function getPath(): string
+    {
+        return \dirname(__DIR__);
+    }
 }

@@ -1,0 +1,4 @@
+setono_sylius_coupon_url_application:
+    coupon_applied: Rabattkoden är nu aktiverad i din varukorg
+    coupon_applied_not_fulfilled: Rabattkoden är sparad i din varukorg, men rabatten är inte aktiv ännu eftersom din varukorg inte innehåller de artiklar, belopp eller uppfyller andra kriterier som rabattkoden kräver. Läs om kriterierna för rabattkoden där du fick den (e-post, nyhetsbrev eller annat)
+    coupon_not_eligible: Rabattkoden är inte längre giltig. Detta kan bero på att den har gått ut, att dess användningsgräns är nådd eller något annat

@@ -1,0 +1,4 @@
+setono_sylius_coupon_url_application:
+    coupon_applied: Kod kuponu został aktywowany w Twoim koszyku
+    coupon_applied_not_fulfilled: Kod kuponu został zapisany w Twoim koszyku, ale zniżka nie jest jeszcze aktywna, ponieważ Twój koszyk nie zawiera artykułów, kwot lub nie spełnia innych kryteriów wymaganych przez kupon. Przeczytaj o kryteriach kodu kuponu w miejscu, w którym go otrzymałeś (e-mail, newsletter lub inne)
+    coupon_not_eligible: Kod kuponu nie jest już ważny. Może to być spowodowane jego wygaśnięciem, wyczerpaniem limitu użycia lub czymś innym

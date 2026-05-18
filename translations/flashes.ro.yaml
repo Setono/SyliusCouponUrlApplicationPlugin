@@ -1,0 +1,4 @@
+setono_sylius_coupon_url_application:
+    coupon_applied: Codul cuponului este acum activat în coșul tău
+    coupon_applied_not_fulfilled: Codul cuponului este salvat în coșul tău, dar reducerea nu este încă activă deoarece coșul tău nu conține articolele, sumele sau nu îndeplinește celelalte criterii cerute de cupon. Citește criteriile codului cuponului acolo unde l-ai primit (e-mail, newsletter sau altele)
+    coupon_not_eligible: Codul cuponului nu mai este valabil. Acest lucru poate fi din cauză că a expirat, și-a epuizat limita de utilizare sau din alt motiv

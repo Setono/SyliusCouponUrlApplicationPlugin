@@ -1,0 +1,4 @@
+setono_sylius_coupon_url_application:
+    coupon_applied: Alennuskoodi on nyt aktivoitu ostoskorissasi
+    coupon_applied_not_fulfilled: Alennuskoodi on tallennettu ostoskoriisi, mutta alennus ei ole vielä voimassa, koska ostoskorisi ei sisällä tuotteita, summia tai täytä muita alennuskoodin vaatimia kriteerejä. Lue alennuskoodin kriteereistä paikasta, jossa sait sen (sähköposti, uutiskirje tai muu)
+    coupon_not_eligible: Alennuskoodi ei ole enää voimassa. Tämä voi johtua siitä, että se on vanhentunut, sen käyttöraja on saavutettu tai jostain muusta syystä

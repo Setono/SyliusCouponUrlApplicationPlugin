@@ -1,0 +1,27 @@
+{% extends '@SyliusShop/shared/layout/base.html.twig' %}
+
+{% form_theme form '@SyliusShop/form/theme.html.twig' %}
+
+{% block title %}{{ 'setono_sylius_coupon_url_application.ui.apply_coupon'|trans }} | {{ parent() }}{% endblock %}
+
+{% block content %}
+    <div class="container my-auto">
+        <div class="container my-auto">
+            <div class="row justify-content-center mt-4 mb-5">
+                <div class="col-12 col-md-6">
+                    <div class="mb-5">
+                        <h1 class="h2">{{ 'setono_sylius_coupon_url_application.ui.apply_coupon'|trans }}</h1>
+                    </div>
+
+                    {{ form_start(form, {'method': 'get', 'attr': {'class': 'd-grid gap-3', 'novalidate': 'novalidate'}}) }}
+                        {{ form_row(form.coupon) }}
+
+                        <button type="submit" class="btn btn-primary">
+                            {{ 'sylius.ui.apply_coupon'|trans }}
+                        </button>
+                    {{ form_end(form) }}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

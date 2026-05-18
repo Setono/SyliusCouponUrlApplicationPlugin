@@ -1,0 +1,13 @@
+setono_sylius_coupon_url_application:
+    form:
+        apply_coupon:
+            code: Rabattkod
+    ui:
+        apply_coupon: Använd rabattkod på din beställning
+        show_url: Visa URL
+        modal:
+            title: Rabattkods-URL
+            base_url: Bas-URL
+            url: URL
+            copy: Kopiera
+            copied: URL kopierad till urklipp

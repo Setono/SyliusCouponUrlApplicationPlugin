@@ -1,0 +1,4 @@
+setono_sylius_coupon_url_application:
+    coupon_applied: Der Gutscheincode ist nun in Ihrem Warenkorb aktiviert
+    coupon_applied_not_fulfilled: Der Gutscheincode ist in Ihrem Warenkorb gespeichert, aber der Rabatt ist noch nicht aktiv, da Ihr Warenkorb nicht die Artikel, Beträge oder andere vom Gutscheincode geforderten Kriterien erfüllt. Lesen Sie die Kriterien des Gutscheincodes dort nach, wo Sie ihn erhalten haben (E-Mail, Newsletter oder anderes)
+    coupon_not_eligible: Der Gutscheincode ist nicht mehr gültig. Dies kann daran liegen, dass er abgelaufen ist, sein Nutzungslimit erreicht wurde oder etwas anderem

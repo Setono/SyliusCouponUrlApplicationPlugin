@@ -1,0 +1,4 @@
+setono_sylius_coupon_url_application_shop_apply_coupon:
+    path: /coupon
+    defaults:
+        _controller: Setono\SyliusCouponUrlApplicationPlugin\Controller\Action\ApplyCouponAction
